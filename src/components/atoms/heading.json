@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_atoms_headings",
+  "info": {
+    "displayName": "Heading"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "headingLevel": {
+      "type": "enumeration",
+      "required": true,
+      "default": "one",
+      "enum": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six"
+      ]
+    },
+    "headingClass": {
+      "type": "enumeration",
+      "enum": [
+        "text-size-h1",
+        "text-size-h2",
+        "text-size-h3",
+        "text-size-h4",
+        "text-size-h5",
+        "text-size-h6"
+      ]
+    }
+  },
+  "config": {}
+}
