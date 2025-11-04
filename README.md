@@ -1,61 +1,71 @@
-# 🚀 Getting started with Strapi
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+<div align="center">
+  
+[![Type 2](https://img.shields.io/static/v1?label=|&message=WEBSITE&color=ff&style=for-the-badge&logo=realm&logo-color=white)](http://kurtisrogers.com)
+[![Type 2](https://img.shields.io/static/v1?label=|&message=LINKED-IN&color=cdf998&style=for-the-badge&logo=linkedin&logo-color=white)](https://www.linkedin.com/in/roguetrufflepig/)
+[![Type 2](https://img.shields.io/static/v1?label=|&message=RESUME&color=24555f&style=for-the-badge&logo=solid&logo-color=white)](https://docs.google.com/document/d/1gAEWDdSs0BjWWMU-GtNehQqGVLNzoE5h12ZatL2RLdY/edit?usp=sharing)
+[![Gmail icon](https://img.shields.io/static/v1?label=|&message=GMAIL&color=24555f&style=for-the-badge&logo=gmail&logo-color=white)](mailto:kurtmcmurt@gmail.com)
+[![Linktree icon](https://img.shields.io/static/v1?label=|&message=LINKTREE&color=24555f&style=for-the-badge&logo=linktree&logo-color=white)](https://linktr.ee/kurtisrogers)
 
-### `develop`
+</div>
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+Hello and welcome to the repo for my Strapi CMS project.
 
-```
-npm run develop
-# or
-yarn develop
-```
+<!-- ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/kurtmcmurt/kurtisrogers.com/node.js.yml) -->
 
-### `start`
+> [!IMPORTANT]
+> ## Node version
+> This project contains an `.nvmrc` file so if you have that set up on your machine, you can simply run `nvm use`.
+>
+> **Recommended**
+> ```sh
+> v20.18.0
+> ```
+>
+> ## Installation
+> ```sh
+> yarn
+> ```
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+> [!NOTE]
+> ### Production mode (locally)
+> ```sh
+>   yarn build
+>   yarn start
+> ```
+>
+> ### Development mode
+> Note: Make sure you have Docker running!
+> ```sh
+>   yarn develop
+> ```
+>
+> ### Build
+> ```sh
+>   yarn build
+> ```
+>
+> ### Stopping the database
+> ```sh
+>   yarn stop:db
+> ```
+>
+> ### Export your backend configuration
+> If you want your backend UI changes to persist you'll need to run the following:
+> ```sh
+>   yarn dump
+> ```
+>
+> If you wish to restore some changes (to undo whatever you've don in the backend) then simply run the following:
+> ```sh
+>   yarn restore
+> ```
+>
 
-```
-npm run start
-# or
-yarn start
-```
+>## Environment variables
+>TODO
 
-### `build`
+>## API information
+>TODO
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+[![Kurtis' GitHub stats](https://github-readme-stats.vercel.app/api?username=kurtmcmurt)](https://github.com/rahulkarda/readme-components)
