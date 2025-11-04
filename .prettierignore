@@ -3,7 +3,7 @@
 .prettierrc
 .storybook/*
 .vscode/*
-eslint.config.js
+eslint.config.mjs
 index.html
 public/*
 README.mdx
@@ -15,3 +15,4 @@ dist/*
 types/generated/*
 config/*
 scripts/*
+.strapi/*
