@@ -19,6 +19,11 @@
       "component": "shared.form-settings",
       "repeatable": false,
       "required": true
+    },
+    "inputs": {
+      "type": "component",
+      "component": "atoms.inputs",
+      "repeatable": true
     }
   },
   "config": {}
