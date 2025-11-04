@@ -1,0 +1,17 @@
+.github/*
+.prettierignore
+.prettierrc
+.storybook/*
+.vscode/*
+eslint.config.js
+index.html
+public/*
+README.mdx
+tsconfig.json
+vite.config.js
+node_modules/*
+dist/*
+!src/*
+types/generated/*
+config/*
+scripts/*

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface Env {
   (key: string, defaultValue?: string): string;
   int(key: string, defaultValue?: number): number;
