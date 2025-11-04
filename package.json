@@ -17,7 +17,9 @@
     "restore": "strapi config:restore -f config-dump.json",
     "generate": "strapi generate",
     "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "postinstall": "husky",
+    "lint": "npx eslint"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.30.0",
@@ -38,7 +40,13 @@
     "@types/pg": "^8",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5"
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "husky": "^9.1.7",
+    "prettier": "3.5.2",
+    "typescript": "^5",
+    "typescript-eslint": "^8.25.0"
   },
   "engines": {
     "node": ">=18.0.0 <=22.x.x"
