@@ -29,7 +29,12 @@ export interface MoleculesCard extends Struct.ComponentSchema {
     displayName: "Card";
     icon: "cloud";
   };
-  attributes: {};
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    heading: Schema.Attribute.Component<"atoms.heading", false>;
+    image: Schema.Attribute.Media<"images"> & Schema.Attribute.Required;
+    link: Schema.Attribute.String & Schema.Attribute.Required;
+  };
 }
 
 export interface MoleculesForm extends Struct.ComponentSchema {
@@ -38,7 +43,12 @@ export interface MoleculesForm extends Struct.ComponentSchema {
     displayName: "Form";
     icon: "cloud";
   };
-  attributes: {};
+  attributes: {
+    byline: Schema.Attribute.Text;
+    formConfig: Schema.Attribute.Component<"shared.form-settings", false> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.Component<"atoms.heading", false>;
+  };
 }
 
 export interface MoleculesSocials extends Struct.ComponentSchema {
@@ -59,6 +69,27 @@ export interface OrganismsBanner extends Struct.ComponentSchema {
   attributes: {
     image: Schema.Attribute.Media<"images">;
     title: Schema.Attribute.Component<"atoms.heading", false> & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedFormSettings extends Struct.ComponentSchema {
+  collectionName: "components_shared_form_settings";
+  info: {
+    displayName: "Form settings";
+    icon: "information";
+  };
+  attributes: {
+    action: Schema.Attribute.String;
+    autocomplete: Schema.Attribute.Boolean;
+    enctype: Schema.Attribute.Enumeration<
+      ["application/x-www-form-urlencoded", "multipart/form-data", "text/plain"]
+    >;
+    method: Schema.Attribute.Enumeration<["post", "get", "dialog"]> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<"post">;
+    name: Schema.Attribute.String & Schema.Attribute.Required & Schema.Attribute.Unique;
+    novalidate: Schema.Attribute.Boolean;
+    target: Schema.Attribute.Enumeration<["_self", "_blank", "_parent", "_top", "_unfencedTop"]>;
   };
 }
 
@@ -132,6 +163,7 @@ declare module "@strapi/strapi" {
       "molecules.form": MoleculesForm;
       "molecules.socials": MoleculesSocials;
       "organisms.banner": OrganismsBanner;
+      "shared.form-settings": SharedFormSettings;
       "shared.media": SharedMedia;
       "shared.quote": SharedQuote;
       "shared.rich-text": SharedRichText;

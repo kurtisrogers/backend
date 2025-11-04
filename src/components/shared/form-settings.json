@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_shared_form_settings",
+  "info": {
+    "displayName": "Form settings",
+    "icon": "information"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "autocomplete": {
+      "type": "boolean"
+    },
+    "action": {
+      "type": "string"
+    },
+    "enctype": {
+      "type": "enumeration",
+      "enum": [
+        "application/x-www-form-urlencoded",
+        "multipart/form-data",
+        "text/plain"
+      ]
+    },
+    "method": {
+      "type": "enumeration",
+      "required": true,
+      "default": "post",
+      "enum": [
+        "post",
+        "get",
+        "dialog"
+      ]
+    },
+    "novalidate": {
+      "type": "boolean"
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_self",
+        "_blank",
+        "_parent",
+        "_top",
+        "_unfencedTop"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -5,6 +5,21 @@
     "icon": "cloud"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "component": "atoms.heading",
+      "repeatable": false
+    },
+    "byline": {
+      "type": "text"
+    },
+    "formConfig": {
+      "type": "component",
+      "component": "shared.form-settings",
+      "repeatable": false,
+      "required": true
+    }
+  },
   "config": {}
 }

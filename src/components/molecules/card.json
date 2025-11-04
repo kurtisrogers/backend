@@ -5,6 +5,30 @@
     "icon": "cloud"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "link": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "heading": {
+      "type": "component",
+      "component": "atoms.heading",
+      "repeatable": false
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "unique": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
   "config": {}
 }
