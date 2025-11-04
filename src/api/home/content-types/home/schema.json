@@ -23,7 +23,8 @@
       "type": "dynamiczone",
       "components": [
         "atoms.heading",
-        "organisms.banner"
+        "organisms.banner",
+        "molecules.form"
       ]
     }
   }

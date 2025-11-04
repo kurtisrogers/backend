@@ -23,6 +23,34 @@ export interface AtomsHeading extends Struct.ComponentSchema {
   };
 }
 
+export interface AtomsInputs extends Struct.ComponentSchema {
+  collectionName: "components_atoms_inputs";
+  info: {
+    displayName: "Inputs";
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<
+      [
+        "button",
+        "checkbox",
+        "date",
+        "email",
+        "file",
+        "hidden",
+        "radio",
+        "range",
+        "reset",
+        "search",
+        "submit",
+        "tel",
+        "text",
+        "url"
+      ]
+    >;
+  };
+}
+
 export interface MoleculesCard extends Struct.ComponentSchema {
   collectionName: "components_molecules_cards";
   info: {
@@ -47,6 +75,7 @@ export interface MoleculesForm extends Struct.ComponentSchema {
     byline: Schema.Attribute.Text;
     formConfig: Schema.Attribute.Component<"shared.form-settings", false> &
       Schema.Attribute.Required;
+    inputs: Schema.Attribute.Component<"atoms.inputs", true>;
     title: Schema.Attribute.Component<"atoms.heading", false>;
   };
 }
@@ -159,6 +188,7 @@ declare module "@strapi/strapi" {
   export module Public {
     export interface ComponentSchemas {
       "atoms.heading": AtomsHeading;
+      "atoms.inputs": AtomsInputs;
       "molecules.card": MoleculesCard;
       "molecules.form": MoleculesForm;
       "molecules.socials": MoleculesSocials;

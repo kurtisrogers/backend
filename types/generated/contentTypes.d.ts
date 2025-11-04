@@ -514,7 +514,9 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    components: Schema.Attribute.DynamicZone<["atoms.heading", "organisms.banner"]>;
+    components: Schema.Attribute.DynamicZone<
+      ["atoms.heading", "organisms.banner", "molecules.form"]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

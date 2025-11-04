@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_atoms_inputs",
+  "info": {
+    "displayName": "Inputs"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "button",
+        "checkbox",
+        "date",
+        "email",
+        "file",
+        "hidden",
+        "radio",
+        "range",
+        "reset",
+        "search",
+        "submit",
+        "tel",
+        "text",
+        "url"
+      ]
+    }
+  },
+  "config": {}
+}
