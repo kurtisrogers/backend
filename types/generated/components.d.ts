@@ -28,11 +28,28 @@ export interface AtomsInputs extends Struct.ComponentSchema {
   info: {
     displayName: "Inputs";
   };
+  options: {
+    privateAttributes: true;
+  };
+  pluginOptions: {
+    "content-manager": {
+      visible: false;
+    };
+  };
   attributes: {
+    checkboxes: Schema.Attribute.Component<"atoms.multiple-checkboxes", true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    email: Schema.Attribute.Component<"form.email", false>;
     name: Schema.Attribute.String & Schema.Attribute.Required;
+    reset: Schema.Attribute.Component<"form.reset-button", false>;
     type: Schema.Attribute.Enumeration<
       [
-        "button",
         "checkbox",
         "date",
         "email",
@@ -45,10 +62,59 @@ export interface AtomsInputs extends Struct.ComponentSchema {
         "submit",
         "tel",
         "text",
+        "textarea",
+        "terms",
         "url"
       ]
     >;
   };
+}
+
+export interface AtomsMultipleCheckboxes extends Struct.ComponentSchema {
+  collectionName: "components_atoms_multiple_checkboxes";
+  info: {
+    displayName: "Checkboxes";
+  };
+  options: {
+    privateAttributes: true;
+  };
+  pluginOptions: {
+    "content-manager": {
+      visible: false;
+    };
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required & Schema.Attribute.Unique;
+    required: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    value: Schema.Attribute.String & Schema.Attribute.Required & Schema.Attribute.Unique;
+  };
+}
+
+export interface FormEmail extends Struct.ComponentSchema {
+  collectionName: "components_form_emails";
+  info: {
+    displayName: "Email";
+    icon: "envelop";
+  };
+  attributes: {};
+}
+
+export interface FormReset extends Struct.ComponentSchema {
+  collectionName: "components_form_resets";
+  info: {
+    displayName: "reset";
+    icon: "envelop";
+  };
+  attributes: {};
+}
+
+export interface FormResetButton extends Struct.ComponentSchema {
+  collectionName: "components_form_reset_buttons";
+  info: {
+    displayName: "Reset Button";
+    icon: "envelop";
+  };
+  attributes: {};
 }
 
 export interface MoleculesCard extends Struct.ComponentSchema {
@@ -104,7 +170,7 @@ export interface OrganismsBanner extends Struct.ComponentSchema {
 export interface SharedFormSettings extends Struct.ComponentSchema {
   collectionName: "components_shared_form_settings";
   info: {
-    displayName: "Form settings";
+    displayName: "Form Configuration";
     icon: "information";
   };
   attributes: {
@@ -189,6 +255,10 @@ declare module "@strapi/strapi" {
     export interface ComponentSchemas {
       "atoms.heading": AtomsHeading;
       "atoms.inputs": AtomsInputs;
+      "atoms.multiple-checkboxes": AtomsMultipleCheckboxes;
+      "form.email": FormEmail;
+      "form.reset": FormReset;
+      "form.reset-button": FormResetButton;
       "molecules.card": MoleculesCard;
       "molecules.form": MoleculesForm;
       "molecules.socials": MoleculesSocials;

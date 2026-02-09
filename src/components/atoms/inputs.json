@@ -3,7 +3,14 @@
   "info": {
     "displayName": "Inputs"
   },
-  "options": {},
+  "options": {
+    "privateAttributes": true
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": false
+    }
+  },
   "attributes": {
     "name": {
       "type": "string",
@@ -12,7 +19,6 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "button",
         "checkbox",
         "date",
         "email",
@@ -25,8 +31,58 @@
         "submit",
         "tel",
         "text",
+        "textarea",
+        "terms",
         "url"
       ]
+    },
+    "checkboxes": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "checkbox"
+          ]
+        }
+      },
+      "component": "atoms.multiple-checkboxes",
+      "repeatable": true,
+      "required": true,
+      "min": 1
+    },
+    "email": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "email"
+          ]
+        }
+      },
+      "component": "form.email",
+      "repeatable": false,
+      "required": false
+    },
+    "reset": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "reset"
+          ]
+        }
+      },
+      "component": "form.reset-button",
+      "repeatable": false
     }
   },
   "config": {}
