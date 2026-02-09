@@ -1,10 +1,10 @@
 {
-  "kind": "singleType",
-  "collectionName": "homes",
+  "kind": "collectionType",
+  "collectionName": "pages",
   "info": {
-    "singularName": "home",
-    "pluralName": "homes",
-    "displayName": "Home"
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page"
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +13,11 @@
   "attributes": {
     "title": {
       "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
       "required": true
     },
     "description": {
@@ -29,9 +34,9 @@
     "components": {
       "type": "dynamiczone",
       "components": [
-        "atoms.heading",
         "organisms.banner",
-        "molecules.form"
+        "molecules.form",
+        "atoms.heading"
       ]
     }
   }

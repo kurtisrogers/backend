@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_form_emails",
+  "info": {
+    "displayName": "Email",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {},
+  "config": {}
+}

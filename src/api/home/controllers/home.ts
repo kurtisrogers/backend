@@ -17,7 +17,17 @@ export default factories.createCoreController("api::home.home", ({ strapi }) => 
               populate: "*"
             },
             "molecules.form": {
-              populate: "*"
+              populate: {
+                title: {
+                  populate: "*"
+                },
+                formConfig: {
+                  populate: "*"
+                },
+                inputs: {
+                  populate: "*"
+                }
+              }
             }
           }
         }
